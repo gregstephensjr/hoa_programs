@@ -1,0 +1,71 @@
+PDF BATCH PROCESSOR - SETUP INSTRUCTIONS
+=========================================
+
+INITIAL SETUP (One-time only)
+------------------------------
+
+1. INSTALL PYTHON (if not already installed)
+   - Download Python from: https://www.python.org/downloads/
+   - During installation, CHECK THE BOX: "Add Python to PATH"
+   - This is very important!
+
+2. INSTALL REQUIRED LIBRARIES
+   - Open Command Prompt (search for "cmd" in Windows)
+   - Copy and paste these commands one at a time:
+   
+     pip install pdfplumber
+     pip install pypdf
+     pip install openpyxl
+
+3. PLACE FILES IN YOUR FOLDER
+   - Copy these files to your "daily printing" folder:
+     * batch_process.py
+     * RUN_PDF_PROCESSOR.bat
+   
+   Your folder structure should look like:
+   
+   daily printing/
+   ├── batch_process.py
+   ├── RUN_PDF_PROCESSOR.bat
+   ├── document1.pdf
+   ├── document2.pdf
+   └── ... (other PDF files)
+
+
+DAILY USAGE
+-----------
+
+1. Place all PDF files to process in the "daily printing" folder
+
+2. Double-click "RUN_PDF_PROCESSOR.bat"
+
+3. Wait for processing to complete (a window will open and show progress)
+
+4. When finished, you'll see:
+   - "add to service charges.xlsx" created in the main folder
+   - "Print these" folder created with:
+     * combined_alphabetical.pdf (sorted, ready to print)
+     * Any multi-page PDFs (copied for printing)
+
+5. Print the files in the "Print these" folder
+
+
+TROUBLESHOOTING
+---------------
+
+If you see "Python is not recognized":
+- Python is not installed or not added to PATH
+- Reinstall Python and CHECK "Add Python to PATH"
+
+If you see "No module named 'pdfplumber'":
+- Required libraries not installed
+- Run the pip install commands from step 2 above
+
+If the batch file doesn't work:
+- Make sure batch_process.py is in the same folder
+- Make sure there are PDF files in the folder to process
+
+
+SUPPORT
+-------
+If you encounter issues, contact the person who set this up for you.
